@@ -8,18 +8,6 @@ A quick visual summary of the completed project, including the dataset, workflow
 
 ![Customer Feedback & Sentiment Intelligence Overview](data/customer-feedback-overview.png)
 
-## Project workflow at a glance
-
-```mermaid
-flowchart LR
-    A["Datafiniti Amazon Reviews<br/>28,332 source rows"] --> B["Clean & Validate<br/>28,278 usable reviews<br/>65 products"]
-    B --> C["EDA<br/>ratings, products,<br/>monthly feedback"]
-    C --> D["Sentiment Model<br/>TF-IDF + Logistic Regression<br/>95.18% accuracy<br/>0.975 ROC AUC"]
-    D --> E["Theme Analysis<br/>TF-IDF + NMF<br/>1,581 negative reviews<br/>6 exploratory themes"]
-    E --> F["Tableau Dashboard<br/>5 interactive views"]
-    F --> G["Product Insights<br/>battery longevity,<br/>dead batteries,<br/>tablet/app feedback"]
-```
-
 ## Business questions
 
 - Which products receive the most negative feedback?
@@ -111,11 +99,15 @@ src/
 sql/
   review_metrics.sql
 reports/
+  analysis_notes.md
+  business_recommendations.md
   data_profile.md
   initial_findings.md
-  business_recommendations.md
+  qa_checklist.md
+  theme_guide.md
 tableau/
   DASHBOARD_SPEC.md
+  README.md
 tests/
   test_core.py
 ```
@@ -136,7 +128,7 @@ The end-to-end pipeline was run against the primary dataset and generated all pl
 
 ## Tools
 
-Python, Pandas, scikit-learn, SQL, DuckDB, Tableau-ready CSV outputs, and Pytest.
+Python, Pandas, scikit-learn, SQL/DuckDB, Tableau Public, and Pytest.
 
 ## Limitations
 
