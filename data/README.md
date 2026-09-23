@@ -1,13 +1,29 @@
 # Data
 
-Place the Datafiniti Amazon consumer review CSV at:
+The primary analysis uses the Datafiniti **Amazon Consumer Reviews of Amazon Products — May 2019** CSV.
+
+Place the source file at:
 
 ```text
 data/raw/amazon_reviews.csv
 ```
 
-Raw review data is intentionally ignored by Git.
+Raw and processed review data are intentionally ignored by Git and can be regenerated locally.
 
-The loader supports common Datafiniti fields including `reviews.text`, `reviews.rating`, `reviews.title`, `reviews.date`, `name`, `id`, and `asins`.
+## Verified fields used by the project
 
-The actual uploaded dataset will be inspected before final metrics are published so unsupported fields are not assumed.
+- `id`
+- `name`
+- `asins`
+- `brand`
+- `categories`
+- `primaryCategories`
+- `reviews.date`
+- `reviews.doRecommend`
+- `reviews.numHelpful`
+- `reviews.rating`
+- `reviews.text`
+- `reviews.title`
+- `reviews.username`
+
+The project selected the May 2019 file after checking the three downloaded Datafiniti files for schema differences and review overlap. See `reports/data_profile.md` for the documented selection logic and row counts.
