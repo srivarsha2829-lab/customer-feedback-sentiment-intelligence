@@ -12,7 +12,9 @@
 - [x] Product metrics use rating-based negative/positive definitions consistently
 - [x] Monthly feedback table generated
 - [x] SQL query included
-- [x] Tableau dashboard specification included
+- [x] Tableau dashboard built and published
+- [x] Tableau documentation matches the implemented dashboard
+- [x] Dashboard link and preview added to the main README
 - [x] Business recommendations distinguish findings from causes
 - [x] End-to-end pipeline executed on the primary dataset
 - [x] Automated tests pass
@@ -36,3 +38,7 @@ Generated outputs:
 - `monthly_feedback_trends.csv` — 62 months
 
 Processed review-level CSVs remain local because they contain republished source review text and can be regenerated from the public source file.
+
+## Published visualization
+
+https://public.tableau.com/app/profile/sri.popuri/viz/CustomerFeedbackSentimentIntelligence/Dashboard1
