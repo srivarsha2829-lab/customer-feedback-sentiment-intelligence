@@ -2,60 +2,57 @@
 
 ## Dashboard: Customer Feedback & Sentiment Intelligence
 
-### KPI row
-- Total reviews
-- Average rating
-- Negative review share
-- Products reviewed
+Published dashboard:
 
-### View 1 — Product feedback
+https://public.tableau.com/app/profile/sri.popuri/viz/CustomerFeedbackSentimentIntelligence/Dashboard1
+
+## Final layout
+
+### Product Negative Feedback
 Horizontal bar chart using `product_feedback_summary.csv`.
+
 - Product name
-- Review count
-- Average rating
 - Negative review share
-- Filter: minimum review count
+- Minimum review count: 100
+- Top 10 products by average negative review share
+- Sorted descending
 
-### View 2 — Rating distribution
-Bar chart from `clean_reviews.csv`.
-- Rating (1-5)
-- Number of reviews
+### Rating Distribution
+Bar chart using `rating_sentiment_crosstab.csv`.
 
-### View 3 — Negative-review themes
-Bar chart from `theme_assignments.csv`.
-- Theme ID
-- Number of negative reviews
-- Product filter
+- Rating (1–5)
+- Total reviews calculated as Negative + Positive
+- Review-count labels displayed on bars
 
-Use `theme_summary.csv` alongside this view to inspect the top terms before assigning human-readable labels.
+### Monthly Negative Feedback Trend
+Line chart using `monthly_feedback_trends.csv`.
 
-### View 4 — Feedback trend
-Line chart from `monthly_feedback_trends.csv`.
-- Month
-- Negative review share
-- Review count as context
-
-Avoid interpreting sparse months as meaningful movement.
-
-### View 5 — Rating vs text sentiment
-Heatmap from `rating_sentiment_crosstab.csv`.
-- Rating
-- Text sentiment model
-- Review count
-
-### Product drilldown
-Filters:
-- Product
-- Brand
-- Rating
 - Review month
+- Negative review share
+- Minimum monthly review count: 50
+- Continuous monthly date axis
 
-Detail table:
-- Review title
-- Review text
-- Rating
-- Model sentiment
-- Confidence
-- Helpful votes
+The volume filter prevents very small months from creating misleading percentage spikes.
 
-The dashboard should prioritize interpretable measures. Do not create an opaque composite product score.
+### Negative Review Themes
+Horizontal bar chart using `theme_assignments.csv`.
+
+- Theme ID with human-readable aliases
+- Negative review count
+- Sorted descending
+
+Working theme labels are documented in `reports/theme_guide.md`.
+
+### Rating vs Text Sentiment
+Heatmap using `rating_sentiment_crosstab.csv`.
+
+- Rating on rows
+- Negative / Positive model sentiment on columns
+- Review counts shown as labels and color intensity
+
+## Design principles
+
+- Use interpretable measures instead of a composite product score.
+- Keep rating-based feedback and model-based text sentiment conceptually separate.
+- Use minimum-volume filters where percentage metrics could otherwise be unstable.
+- Treat topic-model themes as exploratory groupings, not verified defect categories.
