@@ -2,7 +2,7 @@
 
 Product analytics project using Amazon consumer reviews to identify recurring customer pain points, compare written feedback with star ratings, and surface product-level feedback patterns.
 
-## Finished project overview
+## What This Project Does
 
 A quick visual summary of the completed project, including the dataset, workflow, model performance, theme analysis, Tableau dashboard, key insights, and tools used.
 
