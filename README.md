@@ -2,6 +2,18 @@
 
 Product analytics project using Amazon consumer reviews to identify recurring customer pain points, compare written feedback with star ratings, and surface product-level feedback patterns.
 
+## Project workflow at a glance
+
+```mermaid
+flowchart LR
+    A["Datafiniti Amazon Reviews<br/>28,332 source rows"] --> B["Clean & Validate<br/>28,278 usable reviews<br/>65 products"]
+    B --> C["EDA<br/>ratings, products,<br/>monthly feedback"]
+    C --> D["Sentiment Model<br/>TF-IDF + Logistic Regression<br/>95.18% accuracy<br/>0.975 ROC AUC"]
+    D --> E["Theme Analysis<br/>TF-IDF + NMF<br/>1,581 negative reviews<br/>6 exploratory themes"]
+    E --> F["Tableau Dashboard<br/>5 interactive views"]
+    F --> G["Product Insights<br/>battery longevity,<br/>dead batteries,<br/>tablet/app feedback"]
+```
+
 ## Business questions
 
 - Which products receive the most negative feedback?
