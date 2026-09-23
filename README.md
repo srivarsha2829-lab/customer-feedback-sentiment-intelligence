@@ -70,6 +70,8 @@ Explore the published dashboard:
 
 https://public.tableau.com/app/profile/sri.popuri/viz/CustomerFeedbackSentimentIntelligence/Dashboard1
 
+![Customer Feedback & Sentiment Intelligence dashboard](https://public.tableau.com/static/images/Cu/CustomerFeedbackSentimentIntelligence/Dashboard1/1_rss.png)
+
 The dashboard includes:
 
 - Product negative-feedback ranking
