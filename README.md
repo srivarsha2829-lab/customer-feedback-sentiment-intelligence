@@ -64,6 +64,20 @@ Exploratory negative-review topics repeatedly surface battery longevity, batteri
 
 These patterns are treated as investigation priorities rather than causal conclusions. See `reports/initial_findings.md` and `reports/business_recommendations.md`.
 
+## Live Tableau dashboard
+
+Explore the published dashboard:
+
+https://public.tableau.com/app/profile/sri.popuri/viz/CustomerFeedbackSentimentIntelligence/Dashboard1
+
+The dashboard includes:
+
+- Product negative-feedback ranking
+- Rating distribution
+- Monthly negative-feedback trend
+- Negative-review theme analysis
+- Rating vs. text-sentiment comparison
+
 ## Project structure
 
 ```text
